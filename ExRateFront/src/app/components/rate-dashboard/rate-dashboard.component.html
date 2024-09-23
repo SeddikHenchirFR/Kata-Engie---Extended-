@@ -1,0 +1,7 @@
+<ng-container *ngFor="let rateKey of (rates$ | async) | keyvalue">
+    <app-rate-card [rate]="rateKey.value"></app-rate-card> 
+  </ng-container>
+  
+  <button (click)="start()">Start</button>
+  <button (click)="stop()">Stop</button>
+  

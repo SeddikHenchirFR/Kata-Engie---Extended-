@@ -1,0 +1,6 @@
+@ExRateBack_HostAddress = http://localhost:5015
+
+GET {{ExRateBack_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

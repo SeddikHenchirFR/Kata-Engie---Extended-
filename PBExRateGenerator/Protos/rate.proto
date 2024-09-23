@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+option csharp_namespace = "PBExRateGenerator";
+
+package rate;
+
+import "google/protobuf/timestamp.proto";
+
+message RateRequest {}
+
+message RateResponse {
+    string IdRate = 1;
+    double Value = 2;
+    google.protobuf.Timestamp TimestampGeneration = 3;
+}
+
+service RateGenerator {
+    rpc GetRate (RateRequest) returns (stream RateResponse);
+}
